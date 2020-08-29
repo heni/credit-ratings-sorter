@@ -6,7 +6,7 @@ import random
 # to tranform it to strings that could be correctly sorted in lexicographic order
 # for more information about credit ratings see https://en.wikipedia.org/wiki/Bond_credit_rating (S&P column).
 
-def reformat_string(rating_str):
+def credit_rating_sortkey(rating_str):
     rating_str = rating_str.replace(
         "+", "X",
     ).replace(
@@ -26,4 +26,4 @@ if __name__ == "__main__":
         "AA-", "AA", "AA+", "AAA"
     ]
     random.shuffle(ratings)
-    print(sorted(ratings, key=reformat_string))
+    print(sorted(ratings, key=credit_rating_sortkey))
