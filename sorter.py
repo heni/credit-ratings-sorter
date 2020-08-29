@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 import random
 
+#
+# solution for the task of simple rule of transformation for credit ratings
+# to tranform it to strings that could be correctly sorted in lexicographic order
+# for more information about credit ratings see https://en.wikipedia.org/wiki/Bond_credit_rating (S&P column).
+
 def reformat_string(rating_str):
     rating_str = rating_str.replace(
         "+", "X",
